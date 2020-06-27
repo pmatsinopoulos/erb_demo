@@ -1,0 +1,18 @@
+Dear <%= full_name %>
+
+We would like to welcome you to our computer programming school.
+
+Below, please, find the list of the courses that you have subscribed to
+and the first date and time the course will start. We would you to be in the
+classroom no later than 5 minutes before the course start time.
+
+<% courses.each do |course| -%>
+------------------------------------------------------------------
+Course: <%= "#{course.title} - #{course.code}"  %>
+Starts At: <%= course.starts_at.strftime('%a %-d, at %I:%M%p') %>
+<% end -%>
+------------------------------------------------------------------
+
+Kind Regards
+Julie, Student Adviser
+julie@uoa.gr
